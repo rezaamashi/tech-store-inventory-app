@@ -53,7 +53,25 @@ class Item:
         return f"Item('{self.name }', '{self.price}', '{self.quantity}')"
 
 
-phone1 = Item("jscPhonev10", 700, 5)
-phone1.broken_phones = 3
-phone2 = Item("jscPhonev20", 900, 5)
-phone2.broken_phones = 3
+class Phone(Item):
+    all = []
+
+    def __init__(self, name: str, price: float, quantity=0, broken_phones=0):
+        # Call to super function to have access to all attributers / methods from parent
+        super().__init__(name, price, quantity)
+
+        # Run validations to the received arguments
+        assert (
+            broken_phones >= 0
+        ), f"Broken Phones: {quantity} ( must not be negative or zero )"
+
+        # Assign to self object
+        self.broken_phones = broken_phones
+
+        # Actions to execute
+        Phone.all.append(self)
+
+
+phone1 = Phone("jscPhonev10", 700, 5, 3)
+print(f"the total price of {phone1.name} is: {phone1.calculate_total_price()}")
+phone2 = Phone("jscPhonev20", 900, 5, 2)
