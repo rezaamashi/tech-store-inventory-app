@@ -1,0 +1,87 @@
+#+TITLE: Tech Store Inventory Program
+#+AUTHOR:  Reza A'masyi
+#+DATE: [2021-11-10]
+
+* Overview
+This is my personal repo on doing [[https://www.youtube.com/watch?v=Ej_02ICOIgs][Object Oriented Programming with Python - Full Course for Beginners - YouTube]].
+
+* Principle of Object Oriented Programming
+
+** Encapsulation
+[[orgit-rev:~/Documents/Reza/Project/Python/oopFreeCodeCamp/::ce4727f812260e203deb2a57e199a4e56819ddb6][ce4727f]]
+
+*** Type Accessing Method
+1. Getting Method => Retrieving Information
+2. Setting Method => Changing Information
+
+Programmer also able to set certain attribute to be read only, only allowing to get certain methods and not allowing to setting methods.
+
+*** Static and Class Methods
+
+**** Static Methods
+[[orgit-rev:~/Documents/Reza/Project/Python/oopFreeCodeCamp/::a520177be372de4974d4c2dab8d268a58682bab6][a520177]]
+This should do something that has relationship with the class, When we need to use method that are not necesarily need to be unique per instance. Set up using decorator =@staticmethod=
+#+begin_src python
+class Item:
+    @staticmethod
+    def is_integer(num):
+#+end_src
+
+**** Class Methods
+[[orgit-rev:~/Documents/Reza/Project/Python/oopFreeCodeCamp/::3af0a1c73ed45cffdac149107deff0555b2b1d5a][3af0a1c]]
+This should also do something that has a relationship with the class, but usually, those are used to manipulate different structures of data to instantiate objects, like from CSV. Set up using decorator =@classmethod=
+#+begin_src python
+class Item:
+    @classmethod
+    def instantiate_from_something(cls): # the argument is mandatory
+#+end_src
+
+*** Read Only Attribute
+[[orgit-rev:~/Documents/Reza/Project/Python/oopFreeCodeCamp/::761243cc3966bd1e7959fcf5e78058e8328a592c][761243c]]
+To set an immutable attribute on class. Set up using decorator =@property=
+
+** Abstraction
+[[orgit-rev:~/Documents/Reza/Project/Python/oopFreeCodeCamp/::836e8d71406db7435034f781dd0814bbcc515988][836e8d7]]
+Ability to only include certain methods or attributes that are important and hiding deemed unnecessary to be known methods and attributes.
+
+*** Workflow
+The way this principle applied is through setting up a point of access to the classes, for more ease of use.
+
+**** Interface
+Point of access for user to use the implementation without going deep into understanding the implementation ([[https://duckduckgo.com/?q=blackboxing&ia=web][Blackboxing at DuckDuckGo]])
+
+**** Implementation
+The coded methods and attribute that not necessarily to be known for the intended purpose of the program to be used.
+
+** Inheritance
+[[orgit-rev:~/Documents/Reza/Project/Python/oopFreeCodeCamp/::eb01161af8a246eb4bc31ed4938347e3f13b2fcd][eb01161]]
+Ability to use methods and attributes from superclass or parent class. While also able to override and adding subclass or child classes specific methods and attributes.
+
+*** Access Modifiers
+A set of rules on which classes have access to other classes, methods, or attributes
+
+**** Public
+Accessible from anywhere in the program
+
+**** Private
+[[orgit-rev:~/Documents/Reza/Project/Python/oopFreeCodeCamp/::e1960afdad4bac639c67c2d639baad5bc9f39450][e1960af]]
+Accessible only from within the same class that the member is defined. This allow programmer to create member with the same name in the program without conflicting with each other [although it is not ideal]
+
+**** Protected
+Accessible within the class it is defined, as well as any subclasses of that class.
+
+** Polymorphism
+[[orgit-rev:~/Documents/Reza/Project/Python/oopFreeCodeCamp/::a0cf1b451adeac270d8f6a3b70994986288cff5f][a0cf1b4]]
+Ability to take on many forms. In this principle objects could take different type of input and keep functioning and producing the intended output.
+
+Note: Make sure to be selecting the exact intended morph as it would not return error directly.
+
+* Attributes
+[[orgit-rev:~/Documents/Reza/Project/Python/oopFreeCodeCamp/::4bcf6b88fc49bdc2a2429434fa95b41356344f47][4bcf6b8]]
+
+** Class
+
+** Instances
+
+* Constructor
+[[orgit-rev:~/Documents/Reza/Project/Python/oopFreeCodeCamp/::9394763bd7a4af41029260d7e866c9c74ff93128][9394763]]
