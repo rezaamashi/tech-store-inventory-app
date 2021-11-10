@@ -50,12 +50,10 @@ class Item:
             return False
 
     def __repr__(self):
-        return f"Item('{self.name }', '{self.price}', '{self.quantity}')"
+        return f"{self.__class__.__name__}('{self.name }', '{self.price}', '{self.quantity}')"
 
 
 class Phone(Item):
-    all = []
-
     def __init__(self, name: str, price: float, quantity=0, broken_phones=0):
         # Call to super function to have access to all attributers / methods from parent
         super().__init__(name, price, quantity)
@@ -68,10 +66,7 @@ class Phone(Item):
         # Assign to self object
         self.broken_phones = broken_phones
 
-        # Actions to execute
-        Phone.all.append(self)
-
 
 phone1 = Phone("jscPhonev10", 700, 5, 3)
-print(f"the total price of {phone1.name} is: {phone1.calculate_total_price()}")
-phone2 = Phone("jscPhonev20", 900, 5, 2)
+print(Item.all)
+print(Phone.all)
