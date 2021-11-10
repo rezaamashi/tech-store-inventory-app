@@ -21,7 +21,17 @@ class Item:
     @property
     # Property decorator = Read-only Attribute
     def name(self):
+        # print(f"you are tryin to get {self.__name}")
         return self.__name
+
+    @name.setter
+    # Setting an attribute
+    def name(self, value):
+        # print(f"you are tryin to set {self.__name}")
+        if len(value) > 10:
+            raise Exception("The name is greater than 10 characters")
+        else:
+            self.__name = value
 
     def calculate_total_price(self):
         return self.price * self.quantity
