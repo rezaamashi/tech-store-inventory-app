@@ -1,7 +1,8 @@
 from phone import Phone
+from keyboard import Keyboard
 
-item1 = Phone("jscPhone", 750, 5)
+item1 = Keyboard("rzaKeyboard", 1200, 5)
 
-item1.apply_increment(0.33)
+item1.apply_discount()
 
 print(item1.price)
