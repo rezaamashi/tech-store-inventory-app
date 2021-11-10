@@ -1,9 +1,8 @@
 from item import Item
 
-item1 = Item("MyItem", 890)
+item1 = Item("MyItem", 750)
 
-# Setting an attribute
-item1.name = "someItems"
+item1.apply_increment(0.2)
+item1.apply_discount()
 
-# Getting an attribute
-print(item1.name)
+print(item1.price)
